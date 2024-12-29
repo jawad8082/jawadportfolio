@@ -40,12 +40,19 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <motion.form 
+       initial={{ opacity: 0 }}
+       animate={{ opacity: 1 }}
+       transition={{ duration: 0.5 }}
+       onSubmit={handleSubmit} 
+       className="space-y-6 w-full max-w-lg mx-auto md:mx-0" // Added max-w-lg & mx-auto
+    >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2 }}
+          className="w-full" // Ensure divs take full width
         >
           <label className={`block text-sm font-medium mb-2 ${
             darkMode ? 'text-gray-300' : 'text-gray-700'
@@ -70,6 +77,7 @@ const ContactForm = () => {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3 }}
+          className="w-full" // Ensure divs take full width
         >
           <label className={`block text-sm font-medium mb-2 ${
             darkMode ? 'text-gray-300' : 'text-gray-700'
@@ -157,7 +165,7 @@ const ContactForm = () => {
           </>
         )}
       </motion.button>
-    </form>
+    </motion.form>
   );
 };
 
@@ -195,7 +203,12 @@ const ContactInfo = () => {
   ];
 
   return (
-    <div className="space-y-8">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="space-y-8 w-full max-w-lg mx-auto md:mx-0" // Added max-w-lg & mx-auto
+    >
       {contactDetails.map((detail, index) => (
         <motion.a
           key={index}
@@ -248,7 +261,7 @@ const ContactInfo = () => {
           </motion.a>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -262,6 +275,7 @@ const Contact = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm mb-6">

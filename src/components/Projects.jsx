@@ -5,7 +5,7 @@ import { PageLayout } from './common/PageLayout';
 import { GradientText } from './common/StyledComponents';
 import Navbar from './Navbar';
 import { RocketIcon, GithubIcon, ExternalLinkIcon, FolderIcon } from 'lucide-react';
-import artinvver from "./ProjectImages/Artinvver.png"
+import artinvver from "../assets/ProjectImages/Artinvver.png"
 
 const projects = [
   {
@@ -17,9 +17,9 @@ const projects = [
     image: artinvver
   },
   {
-    title: "AI Task Manager",
+    title: "Nisar Foods",
     description: "Smart task management system with AI-powered prioritization and scheduling suggestions.",
-    technologies: ["Python", "TensorFlow", "FastAPI", "React"],
+    technologies: ["Wordpress", "", "FastAPI", "React"],
     githubUrl: "https://github.com/username/project",
     liveUrl: "https://project-demo.com",
     image: "/path-to-image.jpg"

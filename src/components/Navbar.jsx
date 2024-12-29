@@ -58,7 +58,7 @@ const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { to: "hero", label: "Hero" },
+        { to: "hero", label: "Home" },
         { to: "experience", label: "Experience" },
         { to: "skills", label: "Skills" },
         { to: "education", label: "Education" },
@@ -116,7 +116,7 @@ const Navbar = () => {
                             </motion.ul>
                         </div>
 
-                        <div className="hidden md:block">
+                        <div className=" md:block">
                             <DarkModeToggle darkMode={darkMode} onToggle={toggleDarkMode} />
                         </div>
                     </div>
