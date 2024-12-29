@@ -76,14 +76,14 @@ const Hero = () => {
               <span className="w-2 h-2 rounded-full bg-violet-400 animate-pulse" />
             </div>
 
-            <h1 className={`text-5xl md:text-6xl lg:text-7xl font-bold leading-tight ${
+            <h1 className={`text-3xl md:text-6xl lg:text-7xl font-bold leading-tight ${
               darkMode ? 'text-white' : 'text-gray-800'
             }`}>
               Hello, I'm{' '}
               <GradientText>Jawad</GradientText>
               <Typewriter
                 options={{
-                  strings: ["Web Developer 😀", "Freelancer 👻", "Web Designer ✨"],
+                  strings: ["Web Developer", "Freelancer", "Web Designer"],
                   delay: 30,
                   autoStart: true,
                   loop: true,
