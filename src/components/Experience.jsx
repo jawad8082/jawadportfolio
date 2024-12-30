@@ -17,31 +17,32 @@ const experiences = [
       "Improved system performance by 40% through optimization",
       "Mentored junior developers and conducted code reviews"
     ],
-    skills: ["React", "Node.js", "AWS", "Wordpress"]
+    skills: ["React", "Node.js", "Wordpress"]
   },
   {
-    company: "Digital Solutions Ltd",
-    position: "Full Stack Developer",
-    duration: "2020 - 2022",
-    location: "New York, NY",
+    company: "Fiverr",
+    position: "Fullstack Developer",
+    duration: "Jan 2023 - Present",
+    location: "Remote",
     description: [
-      "Built scalable web applications using modern technologies",
-      "Implemented CI/CD pipelines reducing deployment time by 60%",
-      "Collaborated with UX team to improve user experience"
+      "Develop and maintain full-stack web applications",
+      "Implemented responsive designs and user interfaces",
+      "Managed database architecture and API integrations for web applications",
+      "Worked closely with designers and product managers"
     ],
-    skills: ["TypeScript", "React", "PostgreSQL", "Express", "Redis"]
+    skills: ["React", "Node.js", "MongoDB", "Express", "REST APIs"]
   },
   {
-    company: "StartUp Vision",
-    position: "Software Developer",
-    duration: "2018 - 2020",
-    location: "Austin, TX",
+    company: "IRC",
+    position: "Data Entry Operator",
+    duration: "Sep 2023 - Dec 2023",
+    location: "Karachi, Sindh",
     description: [
-      "Developed responsive web applications from scratch",
-      "Integrated third-party APIs and payment systems",
-      "Participated in agile development processes"
+      "Managed and maintained accurate data entry in organizational databases",
+      "Processed large volumes of data with high accuracy and attention to detail",
+      "Generated regular reports and performed data quality checks"
     ],
-    skills: ["JavaScript", "Vue.js", "Python", "MongoDB", "Git"]
+    skills: ["Data Entry", "MS Office", "Database Management", "Data Verification"]
   }
 ];
 

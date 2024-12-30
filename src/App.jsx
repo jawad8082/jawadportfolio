@@ -73,9 +73,9 @@ function App() {
             <Projects />
           </section>
           
-          <section id="blogs">
+          {/* <section id="blogs">
             <Blog />
-          </section>
+          </section> */}
           
           <section id="contact">
             <Contact />

@@ -6,31 +6,33 @@ import { GradientText } from './common/StyledComponents';
 import Navbar from './Navbar';
 import { RocketIcon, GithubIcon, ExternalLinkIcon, FolderIcon } from 'lucide-react';
 import artinvver from "../assets/ProjectImages/Artinvver.png"
+import nisarfoods from "../assets/ProjectImages/nisarfoods.png"
+import linahs from "../assets/ProjectImages/linahs.png"
 
 const projects = [
   {
-    title: "Car Management system",
-    description: "A full-stack platform with real-time Car management, and admin dashboard.",
-    technologies: ["React", "Node.js", "Express", "MongoDB",],
+    title: "Car Management System",
+    description: "A full-stack platform with real-time Car management, and admin dashboard. Features include vehicle tracking, maintenance scheduling, rental management, and comprehensive reporting tools.",
+    technologies: ["React", "Node.js", "Express", "MongoDB"],
     githubUrl: "https://github.com/jawad8082",
     liveUrl: "https://artinvver.com/",
     image: artinvver
   },
   {
     title: "Nisar Foods",
-    description: "Smart task management system with AI-powered prioritization and scheduling suggestions.",
-    technologies: ["Wordpress", "", "FastAPI", "React"],
-    githubUrl: "https://github.com/username/project",
-    liveUrl: "https://project-demo.com",
-    image: "/path-to-image.jpg"
+    description: "Developed a comprehensive e-commerce platform for food distribution with integrated product management, online ordering system, and automated inventory tracking. Features include secure payment processing, custom product catalogs, and real-time order status updates.",
+    technologies: ["Wordpress", "WooCommerce", "PHP", "MySQL", "JavaScript"],
+    githubUrl: "https://github.com/jawad8082",
+    liveUrl: "https://nisarfoods.com",
+    image: nisarfoods
   },
   {
-    title: "Real-time Chat App",
-    description: "Feature-rich chat application with real-time messaging, file sharing, and video calls.",
-    technologies: ["Next.js", "Socket.io", "WebRTC", "PostgreSQL"],
-    githubUrl: "https://github.com/username/project",
-    liveUrl: "https://project-demo.com",
-    image: "/path-to-image.jpg"
+    title: "Linahs (Ongoing Project)",
+    description: "Full-featured Learning Management System for universities with comprehensive course management, student tracking, and interactive learning tools. Includes virtual classrooms, assignment submission system, and integrated discussion forums.",
+    technologies: ["Wordpress", "PHP", "MySQL"],
+    githubUrl: "https://github.com/8082",
+    liveUrl: "https://linahs.edu",
+    image: linahs
   }
 ];
 

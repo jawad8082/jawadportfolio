@@ -63,7 +63,7 @@ const Navbar = () => {
         { to: "skills", label: "Skills" },
         { to: "education", label: "Education" },
         { to: "projects", label: "Projects" },
-        { to: "blogs", label: "Blogs" },
+        // { to: "blogs", label: "Blogs" },
         { to: "contact", label: "Contact" }
     ];
 
