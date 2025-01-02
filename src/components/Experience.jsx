@@ -1,10 +1,15 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useDarkMode } from './common/DarkModeContext';
-import { PageLayout } from './common/PageLayout';
-import { GradientText } from './common/StyledComponents';
-import Navbar from './Navbar';
-import { BriefcaseIcon, CalendarIcon, MapPinIcon, ArrowRightIcon } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { useDarkMode } from "./common/DarkModeContext";
+import { PageLayout } from "./common/PageLayout";
+import { GradientText } from "./common/StyledComponents";
+import Navbar from "./Navbar";
+import {
+  BriefcaseIcon,
+  CalendarIcon,
+  MapPinIcon,
+  ArrowRightIcon,
+} from "lucide-react";
 
 const experiences = [
   {
@@ -15,9 +20,9 @@ const experiences = [
     description: [
       "Led development of cloud-native microservices architecture",
       "Improved system performance by 40% through optimization",
-      "Mentored junior developers and conducted code reviews"
+      "Mentored junior developers and conducted code reviews",
     ],
-    skills: ["React", "Node.js", "Wordpress"]
+    skills: ["React", "Node.js", "Express", "WordPress"],
   },
   {
     company: "Fiverr",
@@ -28,9 +33,9 @@ const experiences = [
       "Develop and maintain full-stack web applications",
       "Implemented responsive designs and user interfaces",
       "Managed database architecture and API integrations for web applications",
-      "Worked closely with designers and product managers"
+      "Worked closely with designers and product managers",
     ],
-    skills: ["React", "Node.js", "MongoDB", "Express", "REST APIs"]
+    skills: ["MERN", "REST APIs"],
   },
   {
     company: "IRC",
@@ -40,37 +45,34 @@ const experiences = [
     description: [
       "Managed and maintained accurate data entry in organizational databases",
       "Processed large volumes of data with high accuracy and attention to detail",
-      "Generated regular reports and performed data quality checks"
+      "Generated regular reports and performed data quality checks",
     ],
-    skills: ["Data Entry", "MS Office", "Database Management", "Data Verification"]
-  }
+    skills: ["Data Entry", "Database Management", "Data Verification"],
+  },
 ];
 
 const ExperienceCard = ({ experience, index }) => {
   const { darkMode } = useDarkMode();
-  
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.2 }}
-      className={`group relative p-8 rounded-3xl backdrop-blur-md hover:transform hover:scale-[1.02] transition-all duration-300 ${
+      className={`group relative p-8 rounded-3xl backdrop-blur-md transform-gpu hover:translate-y-[-4px] transition-all duration-300 ${
         darkMode
-          ? 'bg-slate-800/90 border border-slate-700/50 shadow-lg shadow-violet-500/5'
-          : 'bg-white/90 border border-gray-400 shadow-xl shadow-gray-200/50'
+          ? "bg-slate-800/90 border border-slate-700/50 shadow-lg shadow-violet-500/5"
+          : "bg-white/90 border border-gray-200/50 hover:bg-white shadow-lg hover:shadow-xl"
       }`}
     >
-      {/* Decorative Elements */}
-      <div className={`absolute top-0 left-0 w-full h-full rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
-        darkMode ? 'bg-gradient-to-br from-violet-500/10 to-transparent' : 'bg-gradient-to-br from-violet-50 to-transparent'
-      }`} />
-
       <div className="relative z-10">
         <div className="mb-8">
-          <h3 className={`text-2xl font-bold mb-3 ${
-            darkMode ? 'text-white' : 'text-gray-900'
-          }`}>
+          <h3
+            className={`text-2xl font-bold mb-3 ${
+              darkMode ? "text-white" : "text-gray-900"
+            }`}
+          >
             {experience.position}
           </h3>
           <h4 className="text-lg font-semibold">
@@ -80,25 +82,32 @@ const ExperienceCard = ({ experience, index }) => {
           </h4>
         </div>
 
-        <div className={`flex gap-6 mb-6 ${
-          darkMode ? 'text-gray-300' : 'text-gray-600'
-        }`}>
-          <div className="flex items-center gap-2 bg-violet-500/10 px-3 py-1 rounded-full">
+        <div
+          className={`flex gap-6 mb-6 ${
+            darkMode ? "text-gray-300" : "text-gray-600"
+          }`}
+        >
+          <div className="flex items-center gap-2 px-3 py-1 ">
             <CalendarIcon size={16} className="text-violet-500" />
             <span className="text-sm font-medium">{experience.duration}</span>
           </div>
-          <div className="flex items-center gap-2 bg-violet-500/10 px-3 py-1 rounded-full">
+          <div className="flex items-center gap-2 px-3 py-1 ">
             <MapPinIcon size={16} className="text-violet-500" />
             <span className="text-sm font-medium">{experience.location}</span>
           </div>
         </div>
 
-        <ul className={`space-y-4 mb-8 ${
-          darkMode ? 'text-gray-300' : 'text-gray-600'
-        }`}>
+        <ul
+          className={`space-y-4 mb-8 ${
+            darkMode ? "text-gray-300" : "text-gray-600"
+          }`}
+        >
           {experience.description.map((item, i) => (
             <li key={i} className="flex gap-3 items-start">
-              <ArrowRightIcon size={18} className="flex-shrink-0 mt-1 text-violet-500" />
+              <ArrowRightIcon
+                size={18}
+                className="flex-shrink-0 mt-1 text-violet-500"
+              />
               <span className="text-sm leading-relaxed">{item}</span>
             </li>
           ))}
@@ -110,8 +119,8 @@ const ExperienceCard = ({ experience, index }) => {
               key={i}
               className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors duration-200 ${
                 darkMode
-                  ? 'bg-violet-500/20 text-violet-300 hover:bg-violet-500/30'
-                  : 'bg-violet-100 text-violet-700 hover:bg-violet-200'
+                  ? "bg-violet-500/20 text-violet-300 hover:bg-violet-500/30"
+                  : "bg-violet-100 text-violet-700 hover:bg-violet-200"
               }`}
             >
               {skill}
@@ -129,43 +138,67 @@ const Experience = () => {
   return (
     <PageLayout>
       <Navbar />
-      <div className="relative container mx-auto px-6 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-20"
-        >
-          <div className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full mb-8 transition-colors duration-200 ${
-            darkMode ? 'bg-violet-500/10' : 'bg-violet-50'
-          }">
-            <BriefcaseIcon size={18} className="text-violet-500" />
-            <span className="text-violet-500 font-medium">Career Journey</span>
-          </div>
+      <div
+        className={`relative min-h-screen ${
+          darkMode ? "bg-slate-900" : "bg-gray-50"
+        }`}
+      >
+        <div className="relative container mx-auto px-6 py-24">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center mb-16"
+          >
+            <div
+              className={`inline-flex items-center gap-3 px-6 py-3 rounded-full backdrop-blur-sm mb-8 ${
+                darkMode
+                  ? "bg-slate-800/40 border border-slate-700/50"
+                  : "bg-white/80 border border-gray-200/50 shadow-lg"
+              }`}
+            >
+              <BriefcaseIcon
+                size={20}
+                className={darkMode ? "text-violet-400" : "text-violet-600"}
+              />
+              <span
+                className={darkMode ? "text-violet-300" : "text-violet-600"}
+              >
+                Career Journey
+              </span>
+              <span className="w-2 h-2 rounded-full bg-violet-400 animate-pulse" />
+            </div>
 
-          <h2 className={`text-5xl md:text-6xl font-bold mb-8 tracking-tight ${
-            darkMode ? 'text-white' : 'text-gray-900'
-          }`}>
-            Professional{' '}
-            <GradientText className="bg-clip-text text-transparent bg-gradient-to-r from-violet-500 to-pink-500">
-              Experience
-            </GradientText>
-          </h2>
+            <h2
+              className={`text-5xl md:text-6xl font-bold mb-6 ${
+                darkMode ? "text-white" : "text-gray-900"
+              }`}
+            >
+              Professional{" "}
+              <GradientText className="bg-clip-text text-transparent bg-gradient-to-r from-violet-500 to-pink-500">
+                Experience
+              </GradientText>
+            </h2>
 
-          <p className={`text-xl max-w-2xl mx-auto leading-relaxed ${
-            darkMode ? 'text-gray-300' : 'text-gray-600'
-          }`}>
-            A journey through my professional career, highlighting key achievements and technological expertise
-          </p>
-        </motion.div>
+            <p
+              className={`text-xl max-w-2xl mx-auto leading-relaxed ${
+                darkMode ? "text-gray-300" : "text-gray-600"
+              }`}
+            >
+              A journey through my professional career, highlighting key
+              achievements and technological expertise
+            </p>
+          </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {experiences.map((experience, index) => (
-            <ExperienceCard
-              key={index}
-              experience={experience}
-              index={index}
-            />
-          ))}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {experiences.map((experience, index) => (
+              <ExperienceCard key={index} experience={experience} index={index} />
+            ))}
+          </motion.div>
         </div>
       </div>
     </PageLayout>

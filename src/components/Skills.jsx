@@ -384,10 +384,11 @@ const Skills = () => {
               >
                 Technical Skills
               </span>
+              <span className="w-2 h-2 rounded-full bg-violet-400 animate-pulse" />
             </div>
 
             <h2
-              className={`text-4xl md:text-5xl font-bold mb-6 ${
+              className={`text-5xl md:text-6xl font-bold mb-6 ${
                 darkMode ? "text-white" : "text-gray-900"
               }`}
             >
@@ -395,7 +396,7 @@ const Skills = () => {
             </h2>
 
             <p
-              className={`text-lg max-w-2xl mx-auto ${
+              className={`text-xl max-w-2xl mx-auto leading-relaxed ${
                 darkMode ? "text-gray-300" : "text-gray-600"
               }`}
             >
