@@ -72,7 +72,7 @@ const Hero = () => {
             className="md:w-1/2 space-y-8 text-center md:text-left"
           >
             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm mx-auto md:mx-0">
-              <span className="text-violet-300 font-medium">Software Developer</span>
+              <span className="text-violet-500 font-medium">Software Developer</span>
               <span className="w-2 h-2 rounded-full bg-violet-400 animate-pulse" />
             </div>
 
@@ -125,14 +125,14 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          <motion.div 
+          {/* <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             className="relative hidden md:flex md:w-1/2 justify-center"
           >
             <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96" ref={techContainerRef}>
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-300 blur-2xl opacity-50" />
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-300 animate-pulse" />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-violet-200 to-fuchsia-100 blur-5xl opacity-50" />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-violet-200 to-fuchsia-100 animate-pulse" />
               <img
                 src="/api/placeholder/500/500"
                 alt="Profile"
@@ -170,7 +170,7 @@ const Hero = () => {
                 </motion.div>
               ))}
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </PageLayout>

@@ -75,8 +75,8 @@ const Navbar = () => {
                 scrolled ? 'py-2' : 'py-4'
             }`}
         >
-            <div className={`mx-4 md:mx-8 lg:mx-12 bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-full 
-            shadow-lg transition-all duration-300 ${scrolled ? 'shadow-indigo-500/10' : ''}`}>
+            <div className={`mx-4 md:mx-8 lg:mx-12 bg-white/100 dark:bg-gray-800/80 backdrop-blur-lg rounded-full 
+            border border-gray-200 dark:border-gray-700 transition-all duration-300`}>
                 <div className="container mx-auto px-4 md:px-6 py-3">
                     <div className="flex items-center justify-between">
                         <motion.a
