@@ -66,6 +66,15 @@ const ExperienceCard = ({ experience, index }) => {
           : "bg-white/90 border border-gray-200/50 hover:bg-white shadow-lg hover:shadow-xl"
       }`}
     >
+      {/* Gradient overlay on hover */}
+      <div
+        className={`absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
+          darkMode
+            ? "bg-gradient-to-br from-violet-500/10 via-fuchsia-500/10 to-transparent"
+            : "bg-gradient-to-br from-violet-50 via-fuchsia-50 to-transparent"
+        }`}
+      />
+
       <div className="relative z-10">
         <div className="mb-8">
           <h3
@@ -87,11 +96,11 @@ const ExperienceCard = ({ experience, index }) => {
             darkMode ? "text-gray-300" : "text-gray-600"
           }`}
         >
-          <div className="flex items-center gap-2 px-3 py-1 ">
+          <div className="flex items-center gap-2 px-3 py-1">
             <CalendarIcon size={16} className="text-violet-500" />
             <span className="text-sm font-medium">{experience.duration}</span>
           </div>
-          <div className="flex items-center gap-2 px-3 py-1 ">
+          <div className="flex items-center gap-2 px-3 py-1">
             <MapPinIcon size={16} className="text-violet-500" />
             <span className="text-sm font-medium">{experience.location}</span>
           </div>

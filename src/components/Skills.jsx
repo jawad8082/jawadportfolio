@@ -156,8 +156,6 @@
 //   );
 // };
 
-// export default Skills;
-
 import React from "react";
 import { motion } from "framer-motion";
 import { useDarkMode } from "./common/DarkModeContext";
@@ -195,8 +193,7 @@ const skillCategories = [
       "Building robust server-side solutions with Node.js and Python",
     skills: [
       { name: "Node.js", icon: "🟢" },
-      { name: "NestJS", icon: "🪺" },
-      { name: "Python", icon: "🐍" },
+      { name: "Express", icon: "EX" },
       { name: "RESTful APIs", icon: "🔌" },
       { name: "GraphQL", icon: "◈" },
     ],
@@ -209,7 +206,6 @@ const skillCategories = [
       { name: "PostgreSQL", icon: "🐘" },
       { name: "MongoDB", icon: "🍃" },
       { name: "SQL Server", icon: "📊" },
-      { name: "DynamoDB", icon: "📦" },
     ],
   },
   {
@@ -217,10 +213,8 @@ const skillCategories = [
     icon: <Globe size={24} />,
     description: "Deploying and managing applications on AWS infrastructure",
     skills: [
-      { name: "AWS Amplify", icon: "☁️" },
-      { name: "EC2", icon: "🖥️" },
-      { name: "Lambda", icon: "λ" },
-      { name: "CloudFront", icon: "🌐" },
+      { name: "Git Hub", icon: "😺" },
+      { name: "Git", icon: "🐱" },
       { name: "Docker", icon: "🐳" },
     ],
   },
@@ -248,7 +242,7 @@ const SkillCard = ({ category, index }) => {
           : "bg-white/90 border border-gray-200/50 hover:bg-white shadow-lg hover:shadow-xl"
       }`}
     >
-      {/* Gradient overlay */}
+      {/* Gradient overlay on hover */}
       <div
         className={`absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
           darkMode
@@ -348,20 +342,6 @@ const Skills = () => {
           darkMode ? "bg-slate-900" : "bg-gray-50"
         }`}
       >
-        {/* Background gradient effects */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div
-            className={`absolute top-0 left-1/4 w-96 h-96 rounded-full filter blur-3xl ${
-              darkMode ? "bg-violet-500/10" : "bg-violet-100/50"
-            }`}
-          />
-          <div
-            className={`absolute bottom-1/4 right-1/3 w-96 h-96 rounded-full filter blur-3xl ${
-              darkMode ? "bg-fuchsia-500/10" : "bg-fuchsia-100/50"
-            }`}
-          />
-        </div>
-
         <div className="relative container mx-auto px-6 py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
