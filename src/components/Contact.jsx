@@ -310,11 +310,11 @@ const Contact = () => {
       <div className={`relative min-h-screen ${
         darkMode ? "bg-slate-900" : "bg-gray-50"
       }`}>
-        <div className="relative container mx-auto px-6 py-24">
+        <div className="relative container mx-auto px-4 sm:px-6 py-12 sm:py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-16"
+            className="text-center mb-8 sm:mb-16"
           >
             {/* Header Section */}
             <div className={`inline-flex items-center gap-3 px-6 py-3 rounded-full backdrop-blur-sm mb-8 ${
@@ -332,7 +332,7 @@ const Contact = () => {
               <span className="w-2 h-2 rounded-full bg-violet-400 animate-pulse" />
             </div>
 
-            <h2 className={`text-5xl md:text-6xl font-bold mb-6 ${
+            <h2 className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-6 ${
               darkMode ? "text-white" : "text-gray-900"
             }`}>
               Let's{" "}
@@ -341,7 +341,7 @@ const Contact = () => {
               </GradientText>
             </h2>
 
-            <p className={`text-xl max-w-2xl mx-auto leading-relaxed ${
+            <p className={`text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed ${
               darkMode ? "text-gray-300" : "text-gray-600"
             }`}>
               Have a project in mind or want to collaborate? Feel free to reach out!
@@ -349,19 +349,18 @@ const Contact = () => {
           </motion.div>
 
           {/* Contact Grid */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {/* Contact Form Card */}
+          <div className="grid lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            {/* Send Message Card */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
-              className={`group relative p-8 rounded-3xl backdrop-blur-md transform-gpu hover:translate-y-[-4px] transition-all duration-300 ${
+              className={`h-full group relative p-6 sm:p-8 rounded-3xl backdrop-blur-md transform-gpu hover:translate-y-[-4px] transition-all duration-300 ${
                 darkMode
                   ? "bg-slate-800/90 border border-slate-700/50 shadow-lg shadow-violet-500/5"
                   : "bg-white/90 border border-gray-200/50 hover:bg-white shadow-lg hover:shadow-xl"
               }`}
             >
-              {/* Gradient overlay on hover */}
               <div className={`absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
                 darkMode
                   ? "bg-gradient-to-br from-violet-500/10 via-fuchsia-500/10 to-transparent"
@@ -369,7 +368,7 @@ const Contact = () => {
               }`} />
 
               <div className="relative z-10">
-                <h3 className={`text-2xl font-bold mb-6 ${
+                <h3 className={`text-xl sm:text-2xl font-bold mb-6 ${
                   darkMode ? "text-white" : "text-gray-900"
                 }`}>
                   Send Me a Message
@@ -378,34 +377,30 @@ const Contact = () => {
               </div>
             </motion.div>
 
-            {/* Contact Info Card */}
+            {/* Contact Information Card */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 }}
-              className="space-y-6"
-            >
-              {/* Contact Details */}
-              <div className={`group relative p-8 rounded-3xl backdrop-blur-md transform-gpu hover:translate-y-[-4px] transition-all duration-300 ${
+              className={`h-full group relative p-6 sm:p-8 rounded-3xl backdrop-blur-md transform-gpu hover:translate-y-[-4px] transition-all duration-300 ${
                 darkMode
                   ? "bg-slate-800/90 border border-slate-700/50 shadow-lg shadow-violet-500/5"
                   : "bg-white/90 border border-gray-200/50 hover:bg-white shadow-lg hover:shadow-xl"
-              }`}>
-                {/* Gradient overlay on hover */}
-                <div className={`absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
-                  darkMode
-                    ? "bg-gradient-to-br from-violet-500/10 via-fuchsia-500/10 to-transparent"
-                    : "bg-gradient-to-br from-violet-50 via-fuchsia-50 to-transparent"
-                }`} />
+              }`}
+            >
+              <div className={`absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
+                darkMode
+                  ? "bg-gradient-to-br from-violet-500/10 via-fuchsia-500/10 to-transparent"
+                  : "bg-gradient-to-br from-violet-50 via-fuchsia-50 to-transparent"
+              }`} />
 
-                <div className="relative z-10">
-                  <h3 className={`text-2xl font-bold mb-6 ${
-                    darkMode ? "text-white" : "text-gray-900"
-                  }`}>
-                    Contact Information
-                  </h3>
-                  <ContactInfo />
-                </div>
+              <div className="relative z-10">
+                <h3 className={`text-xl sm:text-2xl font-bold mb-6 ${
+                  darkMode ? "text-white" : "text-gray-900"
+                }`}>
+                  Contact Information
+                </h3>
+                <ContactInfo />
               </div>
             </motion.div>
           </div>
