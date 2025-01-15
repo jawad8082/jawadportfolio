@@ -18,11 +18,21 @@ const experiences = [
     duration: "July 2023 - Sep 2023",
     location: "Karachi, Sindh",
     description: [
-      "Led development of cloud-native microservices architecture",
-      "Improved system performance by 40% through optimization",
-      "Mentored junior developers and conducted code reviews",
+      "Optimize WordPress websites for maximum speed, scalability, and cross-browser compatibility",
+      "Collaborate with UX/UI designers to transform design wireframes into high-quality WordPress themes and plugins."
     ],
-    skills: ["React", "Node.js", "Express", "WordPress"],
+    skills: ["WordPress","Themes","Plugins","Woo Commerce"],
+  },
+  {
+    company: "Sky Byte Solutions",
+    position: "Frontend Developer",
+    duration: "Sep 2023 - Aug 2024",
+    location: "Karachi, Sindh",
+    description: [
+      "Develop responsive, scalable, and maintainable web applications.",
+      "Collaborate with UX/UI designers to translate design wireframes into high- quality code.",
+    ],
+    skills: ["React", "Node.js", "Express", "MongoDB", "WordPress"],
   },
   {
     company: "Fiverr",
