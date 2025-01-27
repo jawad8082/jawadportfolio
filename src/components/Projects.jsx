@@ -13,7 +13,7 @@ import {
 import artinvver from "../assets/ProjectImages/Artinvver.png";
 import nisarfoods from "../assets/ProjectImages/nisarfoods.png";
 import linahs from "../assets/ProjectImages/linahs.png";
-import SupportFoundation from "../assets/ProjectImages/supportFoundation.png";
+import support from "../assets/ProjectImages/support.png";
 
 const projects = [
   {
@@ -68,7 +68,7 @@ const projects = [
     technologies: ["Wordpress", "Themes", "Plugins", "SQL"],
     githubUrl: "https://github.com/jawad8082",
     liveUrl: "https://supportfoundation.org.pk/",
-    image: SupportFoundation,
+    image: support,
     features: [
       "Skill development workshops",
       "Personalized mentorship programs",
