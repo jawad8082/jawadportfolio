@@ -43,7 +43,6 @@ import Education from './components/Education';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Blog from './components/Blog';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
@@ -77,9 +76,9 @@ function App() {
             <Blog />
           </section> */}
           
-          <section id="contact">
+          {/* <section id="contact">
             <Contact />
-          </section>
+          </section> */}
         </main>
         
         <Footer />

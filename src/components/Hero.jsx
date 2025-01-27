@@ -6,11 +6,29 @@ import { GradientText } from "./common/StyledComponents";
 import Navbar from "./Navbar";
 import Typewriter from "typewriter-effect";
 import resume from "../assets/Resume/resume.pdf";
-import { Code } from "lucide-react";
+import { Code, Github, Twitter, Linkedin } from "lucide-react";
 import profile from "../assets/ProjectImages/profile.jpeg";
 
 const Hero = () => {
   const { darkMode } = useDarkMode();
+
+  const socialLinks = [
+    {
+      icon: <Linkedin size={24} />,
+      name: "LinkedIn",
+      link: "https://linkedin.com/in/dev-jawad",
+    },
+    {
+      icon: <Github size={24} />,
+      name: "GitHub",
+      link: "https://github.com/jawad8082",
+    },
+    {
+      icon: <Twitter size={24} />,
+      name: "Twitter",
+      link: "https://twitter.com/",
+    },
+  ];
 
   return (
     <PageLayout>
@@ -71,16 +89,6 @@ const Hero = () => {
               <motion.a
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                href="#contact"
-                className="px-8 py-4 rounded-xl bg-gradient-to-r from-violet-500 to-fuchsia-500
-                          text-white font-medium shadow-lg shadow-violet-500/25 hover:shadow-violet-500/40
-                          transition-all duration-300"
-              >
-                Get in Touch
-              </motion.a>
-              <motion.a
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
                 href={resume}
                 download="Jawad's_Resume.pdf"
                 className={`px-8 py-4 rounded-xl border font-medium transition-all duration-300 backdrop-blur-sm ${
@@ -91,11 +99,59 @@ const Hero = () => {
               >
                 Download Resume
               </motion.a>
+              {/* Social Media Icons */}
+              <div className="flex gap-4">
+                {socialLinks.map((social, index) => (
+                  <motion.a
+                    key={index}
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className={`flex p-3 rounded-xl items-center ${
+                      darkMode
+                        ? "bg-slate-700/50 hover:bg-slate-700/80 text-white hover:text-violet-400"
+                        : "bg-gray-50 hover:bg-gray-100 text-gray-700 hover:text-violet-600"
+                    } transition-all`}
+                    title={social.name}
+                  >
+                    {social.icon}
+                  </motion.a>
+                ))}
+              </div>
             </div>
           </motion.div>
 
           {/* Profile Image Section */}
-          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="md:w-1/2 flex justify-center"
+          >
+            <div className="relative">
+              <motion.div
+                className={`w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 ${
+                  darkMode ? "border-violet-500" : "border-violet-400"
+                }`}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <img
+                  src={profile}
+                  alt="Jawad's Profile"
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+              <div
+                className={`absolute inset-0 rounded-full ${
+                  darkMode
+                    ? "bg-gradient-to-tr from-violet-500/20 to-transparent"
+                    : "bg-gradient-to-tr from-violet-400/20 to-transparent"
+                }`}
+              />
+            </div>
+          </motion.div>
         </div>
       </div>
     </PageLayout>
